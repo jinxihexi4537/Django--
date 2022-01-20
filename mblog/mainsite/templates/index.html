@@ -1,0 +1,12 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %}欢迎来到实力至上主义的教室！！！{% endblock %}
+{% block headmessage %}
+    <h3 style='font-family:楷体;'>本站文章列表</a>
+{% endblock %}
+{% block content %}
+    {% for post in posts %}
+        <p style='font-family: 微软雅黑;font-size: 14pt;font-weight: bold;'></p><a href='/post/{{ post.slug }}'>{{ post.title }}</a>
+        </p>
+    {% endfor %}
+{% endblock %}
